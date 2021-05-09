@@ -16,7 +16,6 @@ class CustomTableViewCell: UITableViewCell {
     @IBOutlet weak var price: UILabel!
     @IBOutlet weak var myContentView: UIView!
     @IBOutlet weak var myStackView: UIStackView!
-    
     func setImageAndLabel(book: Books.Book) {
         if (book.image != "") {
             let name = String(book.image.prefix(book.image.count - 4))
@@ -26,7 +25,9 @@ class CustomTableViewCell: UITableViewCell {
         } else {
             imageOfBook.image = nil
         }
-        myContentView.bottomAnchor.constraint(greaterThanOrEqualTo: imageOfBook.bottomAnchor, constant: 10).isActive = true
+//        if (imageOfBook.image != nil) {
+            myContentView.bottomAnchor.constraint(greaterThanOrEqualTo: imageOfBook.bottomAnchor, constant: 10).isActive = true
+//        }
         myContentView.bottomAnchor.constraint(greaterThanOrEqualTo: myStackView.bottomAnchor, constant: 10).isActive = true
         title.text = book.title
         if (book.subtitle == "") {
