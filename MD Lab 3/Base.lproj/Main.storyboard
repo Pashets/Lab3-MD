@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="d3R-Ju-MJG">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Рисунки-->
+        <scene sceneID="fqn-wF-OWX">
+            <objects>
+                <viewController id="ASY-rx-Uv8" customClass="DrawingViewContoller" customModule="MD_Lab_3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eoD-zi-500">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7YX-3w-Dnm" userLabel="DrawView" customClass="DrawView" customModule="MD_Lab_3" customModuleProvider="target">
+                                <rect key="frame" x="12.666666666666657" y="306" width="350" height="200"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="r6x-tf-Mvo"/>
+                                    <constraint firstAttribute="width" constant="350" id="yjM-fL-5u9"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Smq-Q1-AQG">
+                                <rect key="frame" x="175" y="271" width="175" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="175" id="JZg-BA-LU9"/>
+                                </constraints>
+                                <state key="normal" title="Діаграма"/>
+                                <connections>
+                                    <action selector="DrawRing:" destination="ASY-rx-Uv8" eventType="touchUpInside" id="OEr-Th-Hj4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Axj-b7-6Fl">
+                                <rect key="frame" x="25" y="271" width="175" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="175" id="k5y-RJ-Ezf"/>
+                                </constraints>
+                                <state key="normal" title="Графік">
+                                    <color key="titleColor" systemColor="systemBlueColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="DrawSinusoid:" destination="ASY-rx-Uv8" eventType="touchUpInside" id="UPL-fS-nni"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jNs-Qf-mpB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Smq-Q1-AQG" firstAttribute="centerY" secondItem="eoD-zi-500" secondAttribute="centerY" constant="-120" id="DIX-qR-F5U"/>
+                            <constraint firstItem="7YX-3w-Dnm" firstAttribute="centerY" secondItem="eoD-zi-500" secondAttribute="centerY" id="IpA-4D-LMK"/>
+                            <constraint firstItem="Axj-b7-6Fl" firstAttribute="centerY" secondItem="eoD-zi-500" secondAttribute="centerY" constant="-120" id="IvS-JW-cqD"/>
+                            <constraint firstItem="Smq-Q1-AQG" firstAttribute="centerX" secondItem="eoD-zi-500" secondAttribute="centerX" constant="75" id="OOP-8Y-K9B"/>
+                            <constraint firstItem="Axj-b7-6Fl" firstAttribute="centerX" secondItem="eoD-zi-500" secondAttribute="centerX" constant="-75" id="Tty-Mv-4Mj"/>
+                            <constraint firstItem="7YX-3w-Dnm" firstAttribute="centerX" secondItem="eoD-zi-500" secondAttribute="centerX" id="rfo-Fe-aVB"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Рисунки" image="pencil" catalog="system" id="xu3-DF-DaS"/>
+                    <connections>
+                        <outlet property="drawView" destination="7YX-3w-Dnm" id="oTV-10-MD0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="osy-nl-de6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2060.8695652173915" y="385.71428571428572"/>
+        </scene>
+        <!--Мої книжки-->
+        <scene sceneID="6gV-h3-Qb4">
+            <objects>
+                <viewController title="Мої книжки" id="5oW-Wk-Cqh" customClass="ListViewController" customModule="MD_Lab_3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UCK-cO-yeO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lBL-ZD-XKr">
+                                <rect key="frame" x="0.0" y="44" width="375" height="685"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableCell" rowHeight="117" id="XuT-OO-fbq" customClass="CustomTableViewCell" customModule="MD_Lab_3" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="117"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XuT-OO-fbq" id="EyY-LZ-s0W">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="117"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W8l-sT-UH9">
+                                                    <rect key="frame" x="16" y="10" width="85" height="97"/>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aSh-Zv-YKt">
+                                                    <rect key="frame" x="114.99999999999999" y="0.0" width="41.333333333333329" height="117"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Avz-Hl-HVi">
+                                                            <rect key="frame" x="0.0" y="0.0" width="41.333333333333336" height="76.333333333333329"/>
+                                                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4e-pv-KD6">
+                                                            <rect key="frame" x="0.0" y="76.333333333333329" width="41.333333333333336" height="20.333333333333329"/>
+                                                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="757-M1-Squ">
+                                                            <rect key="frame" x="0.0" y="96.666666666666671" width="41.333333333333336" height="20.333333333333329"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="aSh-Zv-YKt" firstAttribute="bottom" secondItem="EyY-LZ-s0W" secondAttribute="bottom" id="Lf6-M0-4mM" userLabel="My Stack View.bottom = My Content View.bottom"/>
+                                                <constraint firstItem="aSh-Zv-YKt" firstAttribute="top" secondItem="EyY-LZ-s0W" secondAttribute="top" id="bgV-al-gax" userLabel="My Stack View.top = My Content View.top"/>
+                                                <constraint firstItem="W8l-sT-UH9" firstAttribute="leading" secondItem="EyY-LZ-s0W" secondAttribute="leadingMargin" id="dbN-Cr-hfi"/>
+                                                <constraint firstItem="aSh-Zv-YKt" firstAttribute="leading" secondItem="EyY-LZ-s0W" secondAttribute="leading" constant="115" id="g3u-Ct-wR0"/>
+                                                <constraint firstItem="W8l-sT-UH9" firstAttribute="top" secondItem="EyY-LZ-s0W" secondAttribute="top" id="jPk-MM-guA" userLabel="Image Of Book.top = My Content View.top"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                        <connections>
+                                            <outlet property="imageOfBook" destination="W8l-sT-UH9" id="VzS-rC-ShV"/>
+                                            <outlet property="myContentView" destination="EyY-LZ-s0W" id="jYM-UH-bCf"/>
+                                            <outlet property="myStackView" destination="aSh-Zv-YKt" id="9wi-Dz-c6z"/>
+                                            <outlet property="price" destination="757-M1-Squ" id="jTz-VC-kIw"/>
+                                            <outlet property="subtitle" destination="k4e-pv-KD6" id="9P1-J0-Cv3"/>
+                                            <outlet property="title" destination="Avz-Hl-HVi" id="Tws-sf-LG6"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="V93-Pz-eyb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lBL-ZD-XKr" firstAttribute="leading" secondItem="V93-Pz-eyb" secondAttribute="leading" id="3tM-4w-Qq6"/>
+                            <constraint firstItem="lBL-ZD-XKr" firstAttribute="centerX" secondItem="UCK-cO-yeO" secondAttribute="centerX" id="NDd-Zy-dAo"/>
+                            <constraint firstItem="lBL-ZD-XKr" firstAttribute="top" secondItem="V93-Pz-eyb" secondAttribute="top" id="W5p-Uq-DmH"/>
+                            <constraint firstItem="lBL-ZD-XKr" firstAttribute="trailing" secondItem="V93-Pz-eyb" secondAttribute="trailing" id="a6f-lI-hQp"/>
+                            <constraint firstItem="lBL-ZD-XKr" firstAttribute="bottom" secondItem="V93-Pz-eyb" secondAttribute="bottom" id="yzG-Z4-0N3"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Мої книжки" image="doc.richtext.ar" catalog="system" id="1wA-zs-GxQ"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="lBL-ZD-XKr" id="70m-bT-lUM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ISe-fE-P3u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1169.5652173913045" y="893.97321428571422"/>
+        </scene>
+        <!--Якась папочка-->
+        <scene sceneID="AhL-WT-bHs">
+            <objects>
+                <viewController id="IVa-Uu-Bjb" customClass="ViewController" customModule="MD_Lab_3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="b0t-k2-CcH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Дровнін Павло Група ІВ-83 ЗК ІВ-8309" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="My5-3Q-7uL">
+                                <rect key="frame" x="128.66666666666666" y="375.66666666666669" width="118" height="61"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GzU-ec-ej6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="My5-3Q-7uL" firstAttribute="centerX" secondItem="b0t-k2-CcH" secondAttribute="centerX" id="Ql9-t0-FeS"/>
+                            <constraint firstItem="My5-3Q-7uL" firstAttribute="centerY" secondItem="b0t-k2-CcH" secondAttribute="centerY" id="SgT-AB-U2X"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Якась папочка" image="folder" catalog="system" id="gbz-vO-1Xa"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JGE-f5-ilK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2062" y="-219"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="itc-hN-YDs">
+            <objects>
+                <tabBarController id="d3R-Ju-MJG" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jNq-sM-Sgn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="IVa-Uu-Bjb" kind="relationship" relationship="viewControllers" id="hBi-ig-F1h"/>
+                        <segue destination="ASY-rx-Uv8" kind="relationship" relationship="viewControllers" id="xHz-4I-RYy"/>
+                        <segue destination="5oW-Wk-Cqh" kind="relationship" relationship="viewControllers" id="Mjc-LH-kxE"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XtM-I2-mhd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1170" y="84"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="doc.richtext.ar" catalog="system" width="115" height="128"/>
+        <image name="folder" catalog="system" width="128" height="97"/>
+        <image name="pencil" catalog="system" width="128" height="113"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
