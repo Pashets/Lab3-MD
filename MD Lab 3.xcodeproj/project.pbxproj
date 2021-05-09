@@ -36,7 +36,7 @@
 		E93AAC0A2646CCDD002FCFDC /* Image_10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Image_10.png; sourceTree = "<group>"; };
 		E93AAC0B2646CCDD002FCFDC /* Image_05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Image_05.png; sourceTree = "<group>"; };
 		E93AAC0C2646CCDD002FCFDC /* Image_08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Image_08.png; sourceTree = "<group>"; };
-		E93DDABA2645CF34006FBA34 /* BooksList.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = BooksList.txt; path = "../../../../Downloads/Programming assignment 3 2/BooksList.txt"; sourceTree = "<group>"; };
+		E93DDABA2645CF34006FBA34 /* BooksList.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BooksList.txt; sourceTree = "<group>"; };
 		E93DDAC02645D863006FBA34 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		E93DDAC52645DA61006FBA34 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		E94699E52645F4EF007C4A07 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
